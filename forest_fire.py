@@ -45,10 +45,10 @@ def simulation(p, f, area):
             # first rule, if there is fire, it becomes ground(empty)
             if current_area[ii][ij] == FIRE_COLOR:
                 current_area[ii][ij] = GROUND_COLOR
-            # second rule, if point is a ground(empty), then for give prob. p, new tree is created
+            # second rule, if point is a ground(empty), then for given prob. p, new tree is created
             elif current_area[ii][ij] == GROUND_COLOR and np.random.uniform(0, 1) < p:
                 current_area[ii][ij] = TREE_COLOR
-            # third rule, if point is a tree, then for give prob. f,  tree catches on fire
+            # third rule, if point is a tree, then for given prob. f,  tree catches on fire
             elif current_area[ii][ij] == TREE_COLOR and np.random.uniform(0.0, 1.0) < f:
                 current_area[ii][ij] = FIRE_COLOR
             # fourth rule, if point is a tree, and has any neighbour on fire, it catches on fire also
