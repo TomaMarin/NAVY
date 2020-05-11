@@ -28,7 +28,7 @@ def init_area(init_tree_generation_probability, size):
     return area
 
 
-# function to find whether give tree has any neighbour on fire
+# function to find whether given tree has any neighbour on fire
 def is_neighbour_tree_on_fire(x, y, array):
     for dx, dy in neighbourhood:
         if array[y + dy][x + dx] == FIRE_COLOR:
